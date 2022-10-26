@@ -1,8 +1,11 @@
-// import BN from 'bn.js'
-import { PrecompileInput } from './types'
-import { OOGResult, ExecResult } from '../evm'
-import { EvmError, ERROR } from '../exceptions'
 import { bigIntToBuffer, bufferToBigInt, setLengthLeft } from '@ethereumjs/util'
+
+import { OOGResult } from '../evm'
+import { ERROR, EvmError } from '../exceptions'
+
+import type { ExecResult } from '../evm'
+import type { PrecompileInput } from './types'
+
 const assert = require('assert')
 // import assert from 'assert'
 
@@ -28,7 +31,7 @@ export function precompileFcFractionMulExp(opts: PrecompileInput): ExecResult {
   // const decimals = new BN(opts.data.slice(160, 192))
 
   // if (aDenominator.isZero() || bDenominator.isZero()) {
-  if (aDenominator == BigInt(0) || bDenominator == BigInt(0)) {
+  if (aDenominator === BigInt(0) || bDenominator === BigInt(0)) {
     return {
       returnValue: Buffer.alloc(0),
       executionGasUsed: opts.gasLimit,

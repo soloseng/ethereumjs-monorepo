@@ -1,8 +1,11 @@
-// import BN from 'bn.js'
-import { PrecompileInput } from './types'
-import { OOGResult, ExecResult } from '../evm'
 import { Address, bufferToBigInt } from '@ethereumjs/util'
-import { EEIInterface } from '../types'
+
+import { OOGResult } from '../evm'
+
+import type { ExecResult } from '../evm'
+import type { EEIInterface } from '../types'
+import type { PrecompileInput } from './types'
+
 const assert = require('assert')
 // import assert from 'assert'
 

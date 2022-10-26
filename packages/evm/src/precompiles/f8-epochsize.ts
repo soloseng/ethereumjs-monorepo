@@ -1,7 +1,9 @@
-// import BN from 'bn.js'
-import { PrecompileInput } from './types'
-import { OOGResult, ExecResult } from '../evm'
 import { bigIntToBuffer, setLengthLeft } from '@ethereumjs/util'
+
+import { OOGResult } from '../evm'
+
+import type { ExecResult } from '../evm'
+import type { PrecompileInput } from './types'
 
 export function precompileF8Epochsize(opts: PrecompileInput): ExecResult {
   const gasUsed = BigInt(1000)
