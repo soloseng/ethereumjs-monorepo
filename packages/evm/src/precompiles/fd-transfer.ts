@@ -12,7 +12,7 @@ async function incrementBalance(stateManager: EEIInterface, address: Address, de
   await stateManager.putAccount(address, account)
 }
 
-export default async function (opts: PrecompileInput): Promise<ExecResult> {
+export async function precompileFdTransfer(opts: PrecompileInput): Promise<ExecResult> {
   assert(opts.data)
 
   // TODO(asa): Pick an appropriate gas amount

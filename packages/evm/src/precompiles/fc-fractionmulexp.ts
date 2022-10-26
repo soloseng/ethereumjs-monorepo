@@ -6,7 +6,7 @@ import { bigIntToBuffer, bufferToBigInt, setLengthLeft } from '@ethereumjs/util'
 const assert = require('assert')
 // import assert from 'assert'
 
-export default function (opts: PrecompileInput): ExecResult {
+export function precompileFcFractionMulExp(opts: PrecompileInput): ExecResult {
   const gasUsed = BigInt(1050)
   assert(opts.data)
 

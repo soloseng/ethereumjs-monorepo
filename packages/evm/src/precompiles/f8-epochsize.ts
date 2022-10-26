@@ -3,7 +3,7 @@ import { PrecompileInput } from './types'
 import { OOGResult, ExecResult } from '../evm'
 import { bigIntToBuffer, setLengthLeft } from '@ethereumjs/util'
 
-export default function (opts: PrecompileInput): ExecResult {
+export function precompileF8Epochsize(opts: PrecompileInput): ExecResult {
   const gasUsed = BigInt(1000)
   if (opts.gasLimit < gasUsed) {
     return OOGResult(opts.gasLimit)
