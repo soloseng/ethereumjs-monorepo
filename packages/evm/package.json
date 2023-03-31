@@ -1,5 +1,5 @@
 {
-  "name": "@ethereumjs/evm",
+  "name": "@soloseng/ethereumjs-evm",
   "version": "1.2.4",
   "description": "JavaScript Ethereum Virtual Machine (EVM) implementation",
   "keywords": [
